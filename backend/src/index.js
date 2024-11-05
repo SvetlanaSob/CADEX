@@ -5,7 +5,14 @@ import { db, admin } from './firebase.js'
 const app = express()
 const PORT = process.env.PORT || 5000
 
-app.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+};
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.post('/api/saveData', async (req, res) => {
