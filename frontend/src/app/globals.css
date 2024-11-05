@@ -19,6 +19,7 @@
 
 html,
 body {
+	width: 100vw;
 	max-width: 100vw;
 	min-height: 100vh;
 	overflow-x: hidden;
@@ -39,6 +40,12 @@ a {
 	text-decoration: none;
 }
 
-.mainContent {
-	min-height: 100vh;
+.LoadingContainer {
+	position: fixed;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
 }

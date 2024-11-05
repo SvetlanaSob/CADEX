@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Button, TextField } from '@mui/material'
 import { FormContainerSC } from './styles.form'
+import './styles.form.css'
 interface ChildComponentProps {
 	onValueChange: (newValue: boolean) => void
 }
@@ -45,6 +46,8 @@ const Form: React.FC<ChildComponentProps> = ({ onValueChange }) => {
 				onChange={(e) => setInputName(e.target.value)}
 				fullWidth
 				margin='normal'
+				color='primary'
+				className='customInput'
 			/>
 			<TextField
 				label='email'
@@ -52,17 +55,21 @@ const Form: React.FC<ChildComponentProps> = ({ onValueChange }) => {
 				onChange={(e) => setInputEmail(e.target.value)}
 				fullWidth
 				required
+				color='primary'
 				margin='normal'
+				className='customInput'
 			/>
 			<TextField
 				label='message'
 				multiline
 				rows={3}
+				color='primary'
 				value={inputMessage}
 				onChange={(e) => setInputMessage(e.target.value)}
 				fullWidth
 				required
 				margin='normal'
+				className='customInput'
 			/>
 			<Button
 				type='submit'

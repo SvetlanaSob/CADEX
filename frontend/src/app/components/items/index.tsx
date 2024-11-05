@@ -22,13 +22,13 @@ const Items = () => {
 		try {
 			const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/getData`)
 			if (!response.ok) {
-				throw new Error('Ошибка сети')
+				throw new Error('Error')
 			}
 			const data: Data[] = await response.json()
 			setData(data)
 			setIsLoading(false)
 		} catch (error) {
-			console.error('Ошибка получения данных:', error)
+			console.error('Error while getting data:', error)
 		}
 	}
 
