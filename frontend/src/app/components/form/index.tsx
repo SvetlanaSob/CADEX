@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { Button, TextField } from '@mui/material'
 import { FormContainerSC } from './styles.form'
-
 interface ChildComponentProps {
 	onValueChange: (newValue: boolean) => void
 }
@@ -15,7 +14,7 @@ const Form: React.FC<ChildComponentProps> = ({ onValueChange }) => {
 	const handleSubmit = async (event: React.FormEvent) => {
 		event.preventDefault()
 		try {
-			const response = await fetch('http://localhost:5000/api/saveData', {
+			const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/saveData`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',

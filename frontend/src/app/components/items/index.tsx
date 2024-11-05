@@ -20,7 +20,7 @@ const Items = () => {
 	const [isLoading, setIsLoading] = useState<boolean>(true)
 	const fetchData = async () => {
 		try {
-			const response = await fetch('http://localhost:5000/api/getData')
+			const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/getData`)
 			if (!response.ok) {
 				throw new Error('Ошибка сети')
 			}
