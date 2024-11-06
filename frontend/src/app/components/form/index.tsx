@@ -76,7 +76,7 @@ const Form: React.FC<ChildComponentProps> = ({ onValueChange }) => {
 				variant='contained'
 				color='secondary'
 			>
-				Отправить
+				Submit
 			</Button>
 		</FormContainerSC>
 	)
