@@ -42,7 +42,10 @@ export default function RootLayout({
 					property='og:description'
 					content='Test project for CADEX'
 				></meta>
-
+				<meta
+					property='og:image'
+					content='https://fost.ws/soft/wp-content/uploads/2023/03/cad-exchanger-3-17-0-build-16601-crack-2023_6414a3a5bc95d.jpeg'
+				></meta>
 				<title>Cadex Test</title>
 				<meta
 					name='description'
