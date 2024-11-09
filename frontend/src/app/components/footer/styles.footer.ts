@@ -7,6 +7,7 @@ export const FooterContainerSC = styled.footer`
 	justify-content: center;
 	align-items: center;
 	height: max-content;
+	max-height: var(--footer-height);
 	padding: 30px;
 	background-color: var(--background-primary);
 	width: 100%;
